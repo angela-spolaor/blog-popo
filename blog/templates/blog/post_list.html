@@ -6,30 +6,14 @@
         <div>
             <h1><a href="">Poduszka</a></h1>
         </div>
+		<div>
 
-        <div>
-  			{{ posts }}          
-			<p>published: 31.01.2018, 17:04</p>
-            <h2><a href="">História da Raça</a></h2>
-            <p>O cachorro Spitz Alemão possui 3 variações de tamanho, o gigante, o standard e o miniatura conhecido como o Lulu-da-Pomerânia.  Pela sua história, esses animais foram levados para Alemanha através dos Vikings e existem registros dessa raça em 1450.
-
- 
-
-Esse cão de porte médio era usado para guarda e com o tempo se transformou em cão de companhia. Em 1870 o English Kennel Club reconheceu essa raça, a sua popularidade cresceu depois que a Rainha Vitória trouxe o Spitz Alemão da Itália. Em 1900 a AKC reconheceu o Lulu da Pomerânia, ou Sptiz Alemão se preferir.Fonte: https://www.petcaramelo.com/anao-spitz-alemao-branco-preco</p>
-        </div>
-
-        <div>
-            <p>published: 31.01.2018, 12:14</p>
-            <h2><a href="">Temperamento</a></h2>
-            <p>O Spitz Alemão não gosta muito de ser comandado, é um cachorro teimoso e por isso o seu adestramento deve ser rígido. Quando filhote é uma raça muito extrovertida, alegre, inteligente, é corajoso já que late bastante quando se sente ameaçado.</p>
-        </div>
-
- 		<div>
-            <p>published: 31.01.2018, 12:14</p>
-            <h2><a href="">Saúde</a></h2>
-            <p>O Lulu da Pomerânia precisa de exercícios, caso contrário ele pode destruir coisas, por ser pequeno ele pode brincar no quintal ou mesmo no apartamento. É uma raça para ficar dentro de casa e a pelagem precisa ser escovada de 15 em 15 dias.
-Expectativa de vida: 12 - 14 anos.</p>
-        </div>
-
+	{% for post in posts %}
+    	<div>
+       		<p>published: {{ post.published_date }}</p>
+        	<h1><a href="">{{ post.title }}</a></h1>
+        	<p>{{ post.text|linebreaksbr }}</p>
+   		</div>
+	{% endfor %}
     </body>
 </html>
